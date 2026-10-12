@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cataloge, pesquise e descubra filmes e séries no WhatToFlick."> <link rel="stylesheet" href="assets/css/style.css">
+    <title>WhatToFlick | Catálogo de filmes e séries</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" aria-label="WhatToFlick - página inicial">
+            <span>WhatToFlick</span>
+        </a>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Catálogo</a></li>
+                <li><a href="pages/cadastro.html">Adicionar título</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">Descubra seu próximo favorito</h1>
+            <p>Explore, organize e classifique filmes e séries.</p>
+        </section>
+
+        <section aria-labelledby="pesquisa-titulo">
+            <h2 id="pesquisa-titulo">Pesquisar e filtrar</h2>
+
+            <form action="index.html" method="get">
+                <div>
+                    <label for="busca">Buscar por título</label>
+                    <input
+                        type="search"
+                        id="busca"
+                        name="busca"
+                        placeholder="Ex.: Interestelar"
+                    >
+                </div>
+
+                <div>
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo" name="tipo">
+                        <option value="">Todos</option>
+                        <option value="filme">Filmes</option>
+                        <option value="serie">Séries</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="genero">Gênero</label>
+                    <select id="genero" name="genero">
+                        <option value="">Todos os gêneros</option>
+                        <option value="ficcao">Ficção científica</option>
+                        <option value="drama">Drama</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="comedia">Comédia</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="ano">Ano de lançamento</label>
+                    <input
+                        type="number"
+                        id="ano"
+                        name="ano"
+                        min="1888"
+                        max="2100"
+                        placeholder="Ex.: 2014"
+                    >
+                </div>
+
+                <div>
+                    <label for="nota-minima">Nota mínima</label>
+                    <select id="nota-minima" name="nota-minima">
+                        <option value="">Qualquer nota</option>
+                        <option value="6">6 ou mais</option>
+                        <option value="7">7 ou mais</option>
+                        <option value="8">8 ou mais</option>
+                        <option value="9">9 ou mais</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="ordenacao">Ordenar por</label>
+                    <select id="ordenacao" name="ordenacao">
+                        <option value="titulo">Título (A–Z)</option>
+                        <option value="ano-desc">Ano (mais recente)</option>
+                        <option value="ano-asc">Ano (mais antigo)</option>
+                        <option value="nota-desc">Maior nota</option>
+                        <option value="nota-asc">Menor nota</option>
+                    </select>
+                </div>
+
+                <button type="submit">Pesquisar</button>
+                <button type="reset">Limpar filtros</button>
+            </form>
+        </section>
+
+        <section aria-labelledby="catalogo-titulo">
+            <h2 id="catalogo-titulo">Catálogo</h2>
+            <p>Exibindo 4 títulos de exemplo.</p>
+
+            <div>
+                <article>
+                    <img
+                        src="https://placehold.co/300x450/211A2D/EDE9F5?text=Interestelar"
+                        alt="Pôster ilustrativo de Interestelar"
+                        width="200"
+                    >
+                    <h3>Interestelar</h3>
+                    <p>Filme · 2014 · Ficção científica</p>
+                    <p>Nota de referência: 8,7/10</p>
+                    <p>Uma jornada espacial em busca de um futuro para a humanidade.</p>
+                    <p>
+                        <a href="pages/detalhes.html">Ver detalhes</a>
+                        <a href="pages/cadastro.html">Editar</a>
+                        <button type="button">Excluir</button>
+                    </p>
+                </article>
+
+                <article>
+                    <img
+                        src="https://placehold.co/300x450/211A2D/EDE9F5?text=The+Office"
+                        alt="Pôster ilustrativo de The Office"
+                        width="200"
+                    >
+                    <h3>The Office</h3>
+                    <p>Série · 2005 · Comédia</p>
+                    <p>Nota de referência: 9,0/10</p>
+                    <p>O cotidiano cômico dos funcionários de uma empresa de papel.</p>
+                    <p>
+                        <a href="pages/detalhes.html">Ver detalhes</a>
+                        <a href="pages/cadastro.html">Editar</a>
+                        <button type="button">Excluir</button>
+                    </p>
+                </article>
+
+                <article>
+                    <img
+                        src="https://placehold.co/300x450/211A2D/EDE9F5?text=Parasita"
+                        alt="Pôster ilustrativo de Parasita"
+                        width="200"
+                    >
+                    <h3>Parasita</h3>
+                    <p>Filme · 2019 · Drama</p>
+                    <p>Nota de referência: 8,5/10</p>
+                    <p>Uma história de contrastes sociais marcada por reviravoltas.</p>
+                    <p>
+                        <a href="pages/detalhes.html">Ver detalhes</a>
+                        <a href="pages/cadastro.html">Editar</a>
+                        <button type="button">Excluir</button>
+                    </p>
+                </article>
+
+                <article>
+                    <img
+                        src="https://placehold.co/300x450/211A2D/EDE9F5?text=The+Last+of+Us"
+                        alt="Pôster ilustrativo de The Last of Us"
+                        width="200"
+                    >
+                    <h3>The Last of Us</h3>
+                    <p>Série · 2023 · Drama e aventura</p>
+                    <p>Nota de referência: 8,6/10</p>
+                    <p>Dois sobreviventes atravessam um mundo devastado por uma epidemia.</p>
+                    <p>
+                        <a href="pages/detalhes.html">Ver detalhes</a>
+                        <a href="pages/cadastro.html">Editar</a>
+                        <button type="button">Excluir</button>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <aside aria-labelledby="sobre-titulo">
+            <h2 id="sobre-titulo">Sobre o WhatToFlick</h2>
+            <p>
+                Um espaço para organizar e descobrir filmes e séries,
+                comparar notas e encontrar sua próxima sessão.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WhatToFlick — Projeto acadêmico.</p>
+    </footer>
+</body>
+</html>
+```
