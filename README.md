@@ -51,7 +51,7 @@ Abra o arquivo `index.html` em um navegador. Não é necessária a instalação 
 
 ## Publicação
 
-O projeto será publicado pelo GitHub Pages.
+O projeto está publicado pelo GitHub Pages: https://anaborges-cmd.github.io/whattoflick/
 
 ## Próximas etapas
 
@@ -59,4 +59,11 @@ Integração com API de filmes e séries, autenticação de usuários, persistê
 
 ## Versão
 
-**v1.0.0 — Etapa 1: HTML e estrutura da interface.**
+**v2.0.0 — Etapa 2: CSS, layout e responsividade.**
+
+Nesta etapa, foram implementados:
+- Identidade visual com CSS externo;
+- Organização dos elementos com Flexbox e CSS Grid;
+- Estilização do catálogo, dos pôsteres, do formulário e da página de detalhes;
+- Responsividade para diferentes tamanhos de tela;
+- Estados visuais de interação e foco.
