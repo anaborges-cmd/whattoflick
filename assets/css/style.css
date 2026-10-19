@@ -210,29 +210,33 @@ button[type="reset"]:hover {
     background: var(--surface-hover);
 }
 
+
 /* Catálogo de títulos */
 
 main > section:nth-of-type(3) > div {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
     gap: 24px;
 }
 
-article {
+main > section:nth-of-type(3) article {
     min-width: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     transition: transform 0.2s, border-color 0.2s;
 }
 
-article:hover {
+main > section:nth-of-type(3) article:hover {
     transform: translateY(-4px);
     border-color: var(--primary-strong);
 }
 
-article img {
+main > section:nth-of-type(3) article img {
     display: block;
     width: 100%;
     aspect-ratio: 2 / 3;
@@ -240,36 +244,38 @@ article img {
     background: var(--surface-hover);
 }
 
-article h3,
-article > p {
+main > section:nth-of-type(3) article h3,
+main > section:nth-of-type(3) article > p {
     margin-right: 16px;
     margin-left: 16px;
+    overflow-wrap: anywhere;
 }
 
-article h3 {
+main > section:nth-of-type(3) article h3 {
     margin-top: 18px;
     margin-bottom: 10px;
 }
 
-article > p {
+main > section:nth-of-type(3) article > p {
     color: var(--text-muted);
     font-size: 0.92rem;
 }
 
-article > p:last-child {
+main > section:nth-of-type(3) article > p:last-child {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
     margin-bottom: 18px;
+    padding-top: 12px;
 }
 
-article > p:last-child a {
-    align-self: center;
+main > section:nth-of-type(3) article > p:last-child a {
     font-weight: 600;
 }
 
-article button {
+main > section:nth-of-type(3) article button {
     min-height: 36px;
     padding: 6px 10px;
     background: transparent;
@@ -278,9 +284,26 @@ article button {
     font-size: 0.85rem;
 }
 
-article button:hover {
+main > section:nth-of-type(3) article button:hover {
     background: #49232c;
 }
+
+/* Catálogo responsivo */
+
+@media (max-width: 1000px) {
+    main > section:nth-of-type(3) > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    main > section:nth-of-type(3) > div {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+}
+
 
 /* Seção informativa */
 
