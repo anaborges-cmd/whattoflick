@@ -30,10 +30,11 @@
             </p>
         </section>
 
-        <section aria-labelledby="titulo-formulario">
+        
+            <section class="registration-section" aria-labelledby="titulo-formulario">
             <h2 id="titulo-formulario">Informações da obra</h2>
 
-            <form action="#" method="get">
+            <form class="registration-form" action="#" method="get">
                 <div>
                     <label for="titulo">Título *</label>
                     <input
@@ -142,8 +143,8 @@
                     </select>
                 </div>
 
-                <div>
-                    <label for="sinopse">Sinopse *</label>
+                <div class="form-field--full">
+                <label for="sinopse">Sinopse *</label>
                     <textarea
                         id="sinopse"
                         name="sinopse"
@@ -153,8 +154,10 @@
                     ></textarea>
                 </div>
 
-                <div>
+                              
+                <div class="form-field--full">
                     <label for="avaliacao-pessoal">Sua avaliação</label>
+                    
                     <textarea
                         id="avaliacao-pessoal"
                         name="avaliacao-pessoal"
@@ -185,4 +188,3 @@
     </footer>
 </body>
 </html>
-```

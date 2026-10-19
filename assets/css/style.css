@@ -437,3 +437,50 @@ footer {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+
+/* Formulário de cadastro */
+
+.registration-section {
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.registration-section h2 {
+    margin-top: 0;
+}
+
+.registration-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.registration-form .form-field--full {
+    grid-column: 1 / -1;
+}
+
+.registration-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.registration-form button {
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .registration-section {
+        padding: 18px;
+    }
+
+    .registration-form {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .registration-form .form-field--full {
+        grid-column: auto;
+    }
+}
