@@ -30,11 +30,37 @@
             </p>
         </section>
 
-        
+        <section aria-labelledby="titulo-busca-tmdb">
+    <h2 id="titulo-busca-tmdb">Buscar filme ou série no TMDB</h2>
+
+    <p>
+        Pesquise uma obra para preencher automaticamente
+        os dados do cadastro.
+    </p>
+
+    <div>
+        <label for="busca-tmdb">Nome do filme ou série</label>
+        <input
+            type="search"
+            id="busca-tmdb"
+            placeholder="Ex.: Interestelar"
+        >
+
+        <button type="button" id="botao-busca-tmdb">
+            Buscar no TMDB
+        </button>
+    </div>
+
+    <p id="mensagem-tmdb" role="status" aria-live="polite"></p>
+
+    <div id="resultados-tmdb"></div>
+</section>
+
+
             <section class="registration-section" aria-labelledby="titulo-formulario">
             <h2 id="titulo-formulario">Informações da obra</h2>
 
-            <form class="registration-form" action="#" method="get">
+            <form class="registration-form">
                 <div>
                     <label for="titulo">Título *</label>
                     <input
@@ -175,16 +201,22 @@
 
         <aside>
             <h2>Antes de cadastrar</h2>
+            
             <p>
-                Confira o título, o ano de lançamento e a nota antes de
-                preencher os dados. Nesta versão acadêmica, o formulário
-                representa a interface e ainda não armazena os registros.
+            Cadastre seus filmes e séries favoritos.
+            Os registros são armazenados localmente
+            no navegador e podem ser editados ou excluídos.
             </p>
+
         </aside>
     </main>
 
     <footer>
         <p>&copy; 2026 WhatToFlick. Projeto acadêmico.</p>
     </footer>
+
+
+<script src="../assets/js/cadastro.js"></script>
+<script src="../assets/js/tmdb.js"></script>
 </body>
 </html>

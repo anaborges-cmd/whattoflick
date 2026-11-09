@@ -6,6 +6,7 @@
     <meta name="description" content="Cataloge, pesquise e descubra filmes e séries no WhatToFlick.">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>WhatToFlick | Catálogo de filmes e séries</title>
+    <script src="assets/js/app.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,7 +31,7 @@
         <section aria-labelledby="pesquisa-titulo">
             <h2 id="pesquisa-titulo">Pesquisar e filtrar</h2>
 
-            <form action="index.html" method="get">
+            <form id="filtros-form">
                 <div>
                     <label for="busca">Buscar por título</label>
                     <input
@@ -102,78 +103,10 @@
 
         <section aria-labelledby="catalogo-titulo">
             <h2 id="catalogo-titulo">Catálogo</h2>
-            <p>Exibindo 4 títulos de exemplo, organizados por nota e outros critérios.</p>
+            <p id="total-titulos" aria-live="polite">Carregando catálogo...</p>
             <p>As notas são dados fictícios utilizados para demonstrar a classificação do catálogo.</p>
 
-            <div>
-                <article>
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
-                        alt="Pôster do filme Interestelar, de 2014"
-                        width="200"
-                    >
-                    <h3>Interestelar</h3>
-                    <p>Filme · 2014 · Ficção científica</p>
-                    <p>Nota de referência: 8,7/10</p>
-                    <p>Uma jornada espacial em busca de um futuro para a humanidade.</p>
-                    <p>
-                        <a href="pages/detalhes.html">Ver detalhes</a>
-                        <a href="pages/cadastro.html" aria-label="Abrir formulário de edição do título">Editar</a>
-                        <button type="button" aria-label="Excluir este título">Excluir</button>
-                    </p>
-                </article>
-
-                <article>
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg"
-                        alt="Pôster da série The Office"
-                        width="200"
-                    >
-                    <h3>The Office</h3>
-                    <p>Série · 2005 · Comédia</p>
-                    <p>Nota de referência: 9,0/10</p>
-                    <p>O cotidiano cômico dos funcionários de uma empresa de papel.</p>
-                    <p>
-                        <a href="pages/detalhes.html">Ver detalhes</a>
-                        <a href="pages/cadastro.html" aria-label="Abrir formulário de edição do título">Editar</a>
-                        <button type="button" aria-label="Excluir este título">Excluir</button>
-                    </p>
-                </article>
-
-                <article>
-                    <img
-                        src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
-                        alt="Pôster do filme Parasita, de 2019"
-                        width="200"
-                    >
-                    <h3>Parasita</h3>
-                    <p>Filme · 2019 · Drama</p>
-                    <p>Nota de referência: 8,5/10</p>
-                    <p>Uma história de contrastes sociais marcada por reviravoltas.</p>
-                    <p>
-                        <a href="pages/detalhes.html">Ver detalhes</a>
-                        <a href="pages/cadastro.html" aria-label="Abrir formulário de edição do título">Editar</a>
-                        <button type="button" aria-label="Excluir este título">Excluir</button>
-                    </p>
-                </article>
-
-                <article>
-                    <img
-                        src="https://media.themoviedb.org/t/p/w600_and_h900_face/qWo5TP7mBijoZrfxBJkUMctkBt0.jpg"
-                        alt="Pôster da série The Last of Us"
-                        width="200"
-                    >
-                    <h3>The Last of Us</h3>
-                    <p>Série · 2023 · Drama e aventura</p>
-                    <p>Nota de referência: 8,6/10</p>
-                    <p>Dois sobreviventes atravessam um mundo devastado por uma epidemia.</p>
-                    <p>
-                        <a href="pages/detalhes.html">Ver detalhes</a>
-                        <a href="pages/cadastro.html" aria-label="Abrir formulário de edição do título">Editar</a>
-                        <button type="button" aria-label="Excluir este título">Excluir</button>
-                    </p>
-                </article>
-            </div>
+            <div id="lista-catalogo"></div>
         </section>
 
         <aside aria-labelledby="sobre-titulo">

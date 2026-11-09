@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,46 +28,41 @@
             <p>Confira as informações, a sinopse e a avaliação desta obra.</p>
         </section>
 
-        <section class="detail-section" aria-labelledby="titulo-obra">
-    <article class="detail-card">
-        <img
-            class="detail-poster"
-            src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
-            alt="Pôster do filme Interestelar, de 2014"
-            width="300"
-        >
+        <section class="detail-section" aria-label="Informações da obra">
+            <article class="detail-card" id="detalhe-card">
+                <img
+                    class="detail-poster"
+                    id="detalhe-poster"
+                    src="https://placehold.co/300x450?text=Sem+poster"
+                    alt="Pôster não disponível"
+                    width="300"
+                >
 
-        <div class="detail-content">
-            <h2 id="titulo-obra">Interestelar</h2>
+                <div class="detail-content">
+                    <h2 id="titulo-obra">Carregando título...</h2>
 
-            <div class="detail-meta">
-                <p><strong>Tipo:</strong> Filme</p>
-                <p><strong>Ano de lançamento:</strong> 2014</p>
-                <p><strong>Gênero:</strong> Ficção científica, drama e aventura</p>
-                <p><strong>Nota:</strong> 8,7/10</p>
-                <p><strong>Direção:</strong> Christopher Nolan</p>
-            </div>
+                    <div class="detail-meta" id="detalhe-meta"></div>
 
-            <h3>Sinopse</h3>
-            <p>
-                Em um futuro em que a Terra enfrenta dificuldades para
-                sustentar a humanidade, um grupo de exploradores parte
-                em uma missão espacial em busca de condições para a
-                sobrevivência da espécie humana.
-            </p>
+                    <h3>Sinopse</h3>
+                    <p id="detalhe-sinopse"></p>
 
-            <div class="detail-actions">
-                <a href="../index.html">Voltar ao catálogo</a>
-                <a href="cadastro.html">Cadastrar outro título</a>
-            </div>
-        </div>
-    </article>
-</section>
+                    <div id="detalhe-avaliacao"></div>
 
+                    <div class="detail-actions">
+                        <a href="../index.html">Voltar ao catálogo</a>
+                        <a href="#" id="link-editar">Editar título</a>
+                    </div>
+                </div>
+            </article>
+
+            <p id="mensagem-detalhes" role="status"></p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 WhatToFlick. Projeto acadêmico.</p>
     </footer>
+
+    <script src="../assets/js/detalhes.js"></script>
 </body>
 </html>
